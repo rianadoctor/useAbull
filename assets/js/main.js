@@ -1,6 +1,7 @@
 /* js */
 
 
+
 document.getElementById('button').addEventListener('click', function() {
     // Get the body element
     var body = document.body;
@@ -69,14 +70,83 @@ document.getElementById('button').addEventListener('click', function() {
         // Add event listener for click on the new box
     newBox.addEventListener('click', function () {
             // Change the background color of the website
-        document.body.style.backgroundColor = 'lightblue'; // Change this to the desired color
+        document.body.style.backgroundColor = 'mediumpurple'; 
     
             // Remove the images
         document.getElementById('title-image').style.display = 'none';
         document.getElementById('enter-image').style.display = 'none';
         document.getElementById('emoji').style.display = 'none';
+
+
+        //newspaper
+        var newsImage = document.createElement('img');
+        newsImage.src = 'assets/img/news.png'; 
+        newsImage.alt = 'Purple Emoji';
+        newsImage.id = 'emoji'
+        newsImage.style.width = '300px';
+        newsImage.style.position = 'absolute';
+        newsImage.style.top = '30%';
+        newsImage.style.left = '43%';
+        newsImage.className = 'news'; 
+        newsImage.classList.add('floating-animation');
+        document.body.appendChild(newsImage);
+
+        //text below newspaper
+        var newsWriting = document.createElement('p');
+        newsWriting.textContent = 'You have a simple task. Read the digital newspaper.';
+        newsWriting.style.position = 'absolute';
+        newsWriting.style.top = '65%';
+        newsWriting.style.left = '52%';
+        newsWriting.style.fontSize = '30px';
+        newsWriting.style.color = 'white';
+        newsWriting.style.transform = 'translateX(-50%)';
+        document.body.appendChild(newsWriting);
+
+
+        setTimeout(function () {
+            showCookieConsent();
+        }, 1800); 
+
      });
 
 
     
 });
+
+
+function showCookieConsent() {
+    var cookieConsent = document.createElement('div');
+    cookieConsent.className = 'cookie-consent';
+    cookieConsent.innerHTML = 'This website uses cookies. ' +
+        '<button onclick="acceptCookies()">Accept</button>' +
+        '<button onclick="declineCookies()">Decline</button>';
+    document.body.appendChild(cookieConsent);
+}
+
+
+// Function to handle accepting cookies (you can extend this function to set a cookie)
+function acceptCookies() {
+    document.body.removeChild(document.querySelector('.cookie-consent'));
+    document.getElementById('title-image').style.display = 'none';
+    document.getElementById('news').style.display = 'none';
+
+    document.body.style.backgroundColor = 'lightgreen'; 
+}
+
+//cookie counter
+let declineCount = 0;
+
+function declineCookies() {
+    declineCount++;
+
+    var declineButton = document.querySelector('.cookie-consent button:nth-child(2)');
+    
+    if (declineCount === 1) {
+        declineButton.textContent = 'Really?';
+    } else if (declineCount === 2) {
+        declineButton.textContent = 'No';
+    } else if (declineCount === 3) {
+        // Reload the website after the third decline
+        location.reload();
+    }
+}
