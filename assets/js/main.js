@@ -132,7 +132,16 @@ function acceptCookies() {
     document.getElementById('news-text').style.display = 'none';
   
 
-    document.body.style.backgroundColor = 'mediumslateblue'; 
+    document.body.style.backgroundColor = 'mediumslateblue';
+    var newsBlur = document.createElement('img');
+    newsBlur.src = 'assets/img/blur.png'; 
+    newsBlur.alt = 'News Paper Blurred';
+    newsBlur.id = 'blur'
+    newsBlur.style.width = '600px';
+    newsBlur.style.position = 'absolute';
+    newsBlur.style.top = '3%';
+    newsBlur.style.left = '33%';
+    document.body.appendChild(newsBlur); 
 }
 
 //cookie counter
