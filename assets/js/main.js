@@ -29,7 +29,7 @@ document.getElementById('button').addEventListener('click', function() {
     document.body.appendChild(newBox);
 
 
-
+    //emoji 
     var newImage = document.createElement('img');
     newImage.src = 'assets/img/emoji.png'; 
     newImage.alt = 'Purple Emoji';
@@ -37,7 +37,7 @@ document.getElementById('button').addEventListener('click', function() {
     newImage.style.width = '300px';
     newImage.style.position = 'absolute';
     newImage.style.top = '70%';
-    newImage.style.left = '43%';
+    newImage.style.left = '40%';
     newImage.className = 'title'; 
     document.body.appendChild(newImage);
 
@@ -150,7 +150,7 @@ let declineCount = 0;
 function declineCookies() {
     declineCount++;
 
-    var declineButton = document.querySelector('.cookie-consent button:nth-child(2)');
+    var declineButton = document.querySelector('.cookie-consent button:nth-child(2)'); //selecting second button
     
     if (declineCount === 1) {
         declineButton.textContent = 'Are you sure?';
