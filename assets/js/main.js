@@ -142,6 +142,13 @@ function acceptCookies() {
     newsBlur.style.top = '3%';
     newsBlur.style.left = '33%';
     document.body.appendChild(newsBlur); 
+
+    var subscriptionPopUp = document.createElement('div');
+    subscriptionPopUp.className = 'subscription-pop-up';
+    subscriptionPopUp.innerHTML = '<p>Subscribe to our newsletter:</p>' +
+        '<input type="text" id="emailInput" placeholder="Enter your email">' +
+        '<button onclick="subscribe()">Subscribe</button>';
+    document.body.appendChild(subscriptionPopUp);
 }
 
 //cookie counter
@@ -161,4 +168,19 @@ function declineCookies() {
         alert('ERROR!');
         location.reload();
     }
+
+
+}
+
+
+function subscribe() {
+    var emailInput = document.getElementById('emailInput').value;
+
+    // Add your logic to handle the subscription, e.g., sending the email to your server
+
+    // For demonstration purposes, display an alert indicating successful subscription
+    alert('Thank you for subscribing!');
+
+    // Remove the subscription pop-up
+    document.body.removeChild(document.querySelector('.subscription-pop-up'));
 }

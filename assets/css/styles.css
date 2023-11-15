@@ -65,3 +65,10 @@ h1{
     padding: 10px;
     text-align: center;
 }
+
+.subscription-pop-up{
+    position: absolute;
+    left: 41%;
+    top: 50%;
+    background-color: rgb(133, 73, 255);
+}
