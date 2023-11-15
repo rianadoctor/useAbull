@@ -36,19 +36,19 @@ document.getElementById('button').addEventListener('click', function() {
     newImage.id = 'emoji';
     newImage.style.width = '300px';
     newImage.style.position = 'absolute';
-    newImage.style.top = '70%';
+    newImage.style.top = '60%';
     newImage.style.left = '40%';
     newImage.className = 'title'; 
     document.body.appendChild(newImage);
 
 
     var newBox2 = document.createElement('button');
-    newBox2.style.width = '120px';
-    newBox2.style.height = '50px';
+    newBox2.style.width = '80px';
+    newBox2.style.height = '40px';
     newBox2.style.backgroundColor = 'white';
     newBox2.style.position = 'absolute';
-    newBox2.style.top = '80%';
-    newBox2.style.left = '51.5%';
+    newBox2.style.top = '77%';
+    newBox2.style.left = '49.5%';
     newBox2.style.opacity= '0%';
     newBox2.style.transform = 'translate(-50%, -50%)';
     document.body.appendChild(newBox2);
