@@ -33,7 +33,7 @@ document.getElementById('button').addEventListener('click', function() {
     var newImage = document.createElement('img');
     newImage.src = 'assets/img/emoji.png'; 
     newImage.alt = 'Purple Emoji';
-    newImage.id = 'emoji'
+    newImage.id = 'emoji';
     newImage.style.width = '300px';
     newImage.style.position = 'absolute';
     newImage.style.top = '70%';
@@ -81,8 +81,8 @@ document.getElementById('button').addEventListener('click', function() {
         //newspaper
         var newsImage = document.createElement('img');
         newsImage.src = 'assets/img/news.png'; 
-        newsImage.alt = 'Purple Emoji';
-        newsImage.id = 'emoji'
+        newsImage.alt = 'News Paper';
+        newsImage.id = 'news'
         newsImage.style.width = '300px';
         newsImage.style.position = 'absolute';
         newsImage.style.top = '30%';
@@ -94,6 +94,7 @@ document.getElementById('button').addEventListener('click', function() {
         //text below newspaper
         var newsWriting = document.createElement('p');
         newsWriting.textContent = 'You have a simple task. Read the digital newspaper.';
+        newsWriting.id = 'news-text'
         newsWriting.style.position = 'absolute';
         newsWriting.style.top = '65%';
         newsWriting.style.left = '52%';
@@ -127,10 +128,11 @@ function showCookieConsent() {
 // Function to handle accepting cookies (you can extend this function to set a cookie)
 function acceptCookies() {
     document.body.removeChild(document.querySelector('.cookie-consent'));
-    document.getElementById('title-image').style.display = 'none';
     document.getElementById('news').style.display = 'none';
+    document.getElementById('news-text').style.display = 'none';
+  
 
-    document.body.style.backgroundColor = 'lightgreen'; 
+    document.body.style.backgroundColor = 'mediumslateblue'; 
 }
 
 //cookie counter
