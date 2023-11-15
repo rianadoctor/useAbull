@@ -176,9 +176,8 @@ function declineCookies() {
 function subscribe() {
     var emailInput = document.getElementById('emailInput').value;
 
-    // Add your logic to handle the subscription, e.g., sending the email to your server
 
-    // For demonstration purposes, display an alert indicating successful subscription
+    // For demonstration purposes, displaying an alert indicating successful subscription
     alert('Thank you for subscribing!');
 
     // Remove the subscription pop-up
