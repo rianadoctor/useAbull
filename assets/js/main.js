@@ -153,11 +153,12 @@ function declineCookies() {
     var declineButton = document.querySelector('.cookie-consent button:nth-child(2)');
     
     if (declineCount === 1) {
-        declineButton.textContent = 'Really?';
+        declineButton.textContent = 'Are you sure?';
     } else if (declineCount === 2) {
-        declineButton.textContent = 'No';
+        declineButton.textContent = 'This wont hurt you I promise';
     } else if (declineCount === 3) {
         // Reload the website after the third decline
+        alert('ERROR!');
         location.reload();
     }
 }
