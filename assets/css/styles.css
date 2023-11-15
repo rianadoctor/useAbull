@@ -18,3 +18,24 @@ h1{
     cursor: pointer;
 
 }
+
+#title-image{
+    display: none;
+}
+
+#enter-image{
+    display: none;
+}
+
+.title{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+
+
+.enter{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
