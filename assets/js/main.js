@@ -147,7 +147,8 @@ function acceptCookies() {
     subscriptionPopUp.className = 'subscription-pop-up';
     subscriptionPopUp.innerHTML = '<p>Subscribe to our newsletter:</p>' +
         '<input type="text" id="emailInput" placeholder="Enter your email">' +
-        '<button onclick="subscribe()">Subscribe</button>';
+        '<button onclick="subscribe()">Subscribe</button>' +
+        '<button onclick="closeAndReopenPopUp()">Exit</button>';
     document.body.appendChild(subscriptionPopUp);
 }
 
@@ -182,4 +183,15 @@ function subscribe() {
 
     // Remove the subscription pop-up
     document.body.removeChild(document.querySelector('.subscription-pop-up'));
+}
+
+
+function closeAndReopenPopUp() {
+    var subscriptionPopUp = document.querySelector('.subscription-pop-up');
+    subscriptionPopUp.style.display = 'none';
+
+    // Set a timeout to display the pop-up again after 1 second
+    setTimeout(function () {
+        subscriptionPopUp.style.display = 'block';
+    }, 1000);
 }
